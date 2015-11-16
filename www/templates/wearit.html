@@ -1,0 +1,31 @@
+<ion-view view-title="Wear It!" cache-view="false">
+  <ion-content class="padding">
+    <div class="list card">
+      <div class="item item-divider">Current Stretch</div>
+      <div class="item item-body">
+        <div class="txt-center" ng-show="status === 'on'">
+          You have worn your Invisalign for
+        </div>
+        <div class="margin-top-20 txt-center huge-font" ng-show="status === 'on'">
+          {{wearDuration}}
+        </div>
+
+        <div class="txt-center" ng-show="status === 'off'">
+          You are not wearing your Invisalign
+        </div>
+      </div>
+    </div>
+
+    <div class="margin-top-50">
+      <button ng-show="status === 'on'" class="button button-positive button-block" ng-click="takeOff();">
+        Take It Off
+      </button>
+    </div>
+
+    <div class="margin-top-50">
+      <button ng-show="status === 'off'" class="button button-balanced button-block" ng-click="putOn();">
+        Put It On
+      </button>
+    </div>
+  </ion-content>
+</ion-view>

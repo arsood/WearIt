@@ -1,0 +1,15 @@
+<ion-view view-title="History" cache-view="false">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="h in history track by $index">
+        {{formatTime(h.timeOff);}} for {{formatDiff(h.timeOn, h.timeOff);}}
+      </ion-item>
+
+      <div class="margin-top-20">
+        <button class="button button-assertive button-block" ng-click="clearHistory();">
+          Clear History
+        </button>
+      </div>
+    </ion-list>
+  </ion-content>
+</ion-view>
